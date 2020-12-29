@@ -27,7 +27,7 @@ const createImage = ({ preview, original, description }, ind) =>
   );
   
 
-gallery.map((image, ind) => createImage(image, ind));
+gallery.map((image, ind) => createImage(image, ind)).join('');
 
 function onGalleryClick(event) {
   event.preventDefault();
@@ -77,6 +77,20 @@ refs.gallery.addEventListener("click", onGalleryClick);
 refs.closeBtn.addEventListener("click", onCloseModal);
 refs.ligthbox.addEventListener("click", onBackdropClick);
 
+// function onArrowLeftPress(event) {
+//   if (event.code === "ArrowLeft") {
+//     activeIndex = activeIndex === 0 ? gallery.length - 1 : activeIndex - 1;
+//     refs.openImage.src = gallery[activeIndex].original;
+//     refs.openImage.alt = gallery[activeIndex].description;
+//   }
+// }
+// function onArrowRightPress(event) {
+//   if (event.code === "ArrowRight") {
+//     activeIndex = activeIndex === gallery.length - 1 ? 0 : activeIndex + 1;
+//     refs.openImage.src = gallery[activeIndex].original;
+//     refs.openImage.alt = gallery[activeIndex].description;
+//   }
+// }
 
 
 
